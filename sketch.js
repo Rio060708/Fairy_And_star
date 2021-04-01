@@ -9,10 +9,10 @@ const Body = Matter.Body;
 
 function preload()
 {
-	starImg = loadImage("/images/star.png");
-	fairyImg = loadAnimation("/images/fairyImage1.png","/images/fairyImage2.png");
-	bgImg = loadImage("/images/starNight.png");
-	fairyVoice = loadSound("/sound/JoyMusic.mp3");
+	starImg = loadImage("star.png");
+	fairyImg = loadAnimation("fairyImage1.png","fairyImage2.png");
+	bgImg = loadImage("starNight.png");
+	fairyVoice = loadSound("soundJoyMusic.mp3");
 
 }
 
@@ -65,6 +65,14 @@ if(star.position.y > 470){
 	fairy.y = 500;
 	fairy.x = star.x - 140;
   }
+
+
+  drawSprites();
+
+}
+
+
+
 
 
   drawSprites();
