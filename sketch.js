@@ -74,11 +74,3 @@ if(star.position.y > 470){
 
 
 
-
-  drawSprites();
-
-}
-
-
-
-
