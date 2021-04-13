@@ -43,25 +43,6 @@ function setup() {
 function draw() {
   background(bgImg);
 
-  if(keyDown(LEFT_ARROW)){
-	fairy.x -= 5;
-}  
-	if(keyDown(RIGHT_ARROW)){
-	fairy.x += 5;
-	}
-	if(keyDown(UP_ARROW)){
-		fairy.y -= 5;
-	}  
-
-	star.collide(fairy);
-	
-
-
-
-if(keyDown(DOWN_ARROW)){
-	star.velocityY = 15;
-}
-
 if(star.position.y > 470){
 	star.y = 470;
 	fairy.y = 500;
@@ -73,6 +54,17 @@ if(star.position.y > 470){
 
 }
 
-
+function keyPressed() {
+	//write code here
+	if (keyCode===LEFT_ARROW){
+		fairy.velocityX=-1
+	}
+	if (keyCode===RIGHT_ARROW){
+		fairy.velocityX=1
+	}
+	if (keyCode===DOWN_ARROW){
+		star.velocityY=3
+	}
+}
 
 
