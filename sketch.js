@@ -45,9 +45,10 @@ function draw() {
 
   if(keyDown(LEFT_ARROW)){
 	fairy.x -= 5;
-}  if(keyDown(RIGHT_ARROW)){
+}  
+	if(keyDown(RIGHT_ARROW)){
 	fairy.x += 5;
-
+	}
 	if(keyDown(UP_ARROW)){
 		fairy.y -= 5;
 	}  
@@ -56,7 +57,8 @@ function draw() {
 	
 
 
-}  if(keyDown(DOWN_ARROW)){
+
+if(keyDown(DOWN_ARROW)){
 	star.velocityY = 15;
 }
 
