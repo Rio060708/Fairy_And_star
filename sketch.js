@@ -10,7 +10,7 @@ const Body = Matter.Body;
 function preload()
 {
 	starImg = loadImage("star.png");
-	fairyImg = loadAnimation("fairyImage1.png","fairyImage2.png");
+	fairyImg = loadAnimation("fairyImage1.png","images/fairyImage2.png");
 	bgImg = loadImage("starNight.png");
 	fairyVoice = loadSound("JoyMusic.mp3");
 
@@ -32,7 +32,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	starBody = Bodies.circle(650 ,30 , 5 , {restitution:0.5, isStatic:true});
+	starBody = Bodies.circle(650 , 30 , 5 , {restitution:0.5, isStatic:true});
 	World.add(world, starBody);
 	
 	Engine.run(engine);
@@ -43,12 +43,9 @@ function setup() {
 function draw() {
   background(bgImg);
 
-if(star.position.y > 470){
-	star.y = 470;
-	fairy.y = 500;
-	fairy.x = star.x - 140;
-  }
-
+if (starBody.position.y>470){
+	star.velocityY=0
+}
 
   drawSprites();
 
